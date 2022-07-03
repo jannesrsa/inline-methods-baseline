@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "InlineMethodBaseline": {
+      "commandName": "Project",
+      "commandLineArgs": "dotnet.exe run –Project $(projectpath)",
+      "workingDirectory": "$(projectdir)"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    }
+  }
+}
