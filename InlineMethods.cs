@@ -4,22 +4,27 @@ public class InlineMethods
 {
     public static string Create(int size)
     {
-        return BuildStrings(size);
+        var returnVal = BuildStrings(size);
+        return returnVal;
     }
 
     private static string BuildStrings(int size)
     {
-        var bigString = string.Empty;
-        for (int i = 0; i < size; i++)
+        var sizeSqrt = (int)Math.Sqrt(size);
+
+        var returnVal = string.Empty;
+        for (int i = 0; i < sizeSqrt; i++)
         {
-            bigString += GetBigString(size);
+            var otherString = GetBigString(sizeSqrt);
+            returnVal += otherString;
         }
 
-        return bigString;
+        return returnVal;
     }
 
     private static string GetBigString(int size)
     {
-        return new string('1', size);
+        var returnVal = new string('1', size);
+        return returnVal;
     }
 }
